@@ -17,7 +17,7 @@ RUN deps=' \
     && apt-get autoremove -y
 
 # Copy config files
-COPY config/hhvm/php.ini /etc/hhvm/php.ini
+COPY config/hhvm/php.ini $PHP_INI_DIR/
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
