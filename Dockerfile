@@ -11,10 +11,7 @@ RUN deps=' \
         subversion \
         mercurial \
     ' \
-    && apt-get -y update \
-    && apt-get install -y $deps \
-    && rm -rf /var/lib/apt/lists/* \
-    && apt-get autoremove -y
+    && apt-get update && apt-get install -y $deps && rm -rf /var/lib/apt/lists/*
 
 # Copy config files
 COPY config/hhvm/php.ini $PHP_INI_DIR/
