@@ -19,4 +19,4 @@ COPY config/hhvm/php.ini $PHP_INI_DIR/
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-CMD ["composer --help"]
+CMD ["composer", "--help"]
